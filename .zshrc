@@ -48,10 +48,19 @@ alias vi='vim'
 alias ssh='cat ~/.ssh/conf.d/*.config > ~/.ssh/config;ssh'
 alias restart_network='sudo killall -HUP mDNSResponder'
 
+# keychain
+if [ ! -f $HOME/.keychain/$HOSTNAME-sh ] ; then
+    unset SSH_AUTH_SOCK
+fi
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
+
+# go
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH
 
 # attach tmux when loggin
 if which tmux 2>&1 >/dev/null; then
