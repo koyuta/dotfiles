@@ -45,3 +45,6 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'scrooloose/syntastic'
 
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
