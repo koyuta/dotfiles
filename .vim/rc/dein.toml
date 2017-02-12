@@ -39,9 +39,9 @@ repo = 'honza/vim-snippets'
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
 
-[[plugin]]
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 
-[[plugin]]
+[[plugins]]
 repo = 'scrooloose/syntastic'
 
