@@ -52,4 +52,4 @@ set smartindent
 set showmatch
 set wildmenu
 set backspace=indent,eol,start
-
+set colorcolumn=80
