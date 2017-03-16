@@ -43,7 +43,7 @@ repo = 'cocopon/iceberg.vim'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
+repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'fatih/vim-go'
