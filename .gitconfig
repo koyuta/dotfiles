@@ -4,3 +4,5 @@
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
+[diff]
+    indentHeuristic = true
