@@ -1,8 +1,10 @@
 [user]
-    name = koyuta
-    email = koyuuta5330@gmail.com
+  name = koyuta
+  email = koyuuta5330@gmail.com
 [core]
-    excludesfile = ~/.gitignore_global
-    editor = vim
+  excludesfile = ~/.gitignore_global
+  editor = vim
 [diff]
-    indentHeuristic = true
+  indentHeuristic = true
+[commit]
+  template = ~/.gitcommit_template
