@@ -10,7 +10,7 @@ for dir in $VIM_RC_DIR $VIM_RCD_DIR; do
     fi
 done
 
-DOT_FILES=(.gitconfig .gitignore_global .tmux.conf .vimrc .zshrc)
+DOT_FILES=(.gitcommit_template .gitconfig .gitignore_global .tmux.conf .vimrc .zshrc)
 
 VIM_RC_FILES=(dein.toml dein_lazy.toml )
 VIM_RCD_FILES=(fugitive.vim indent-guid.vim neocomplete.vim syntastic.vim vim-go.vim)
