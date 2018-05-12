@@ -3,22 +3,14 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
-hook_post_update = '''
-  if dein#util#_is_windows()
-    let cmd = 'tools\\update-dll-mingw'
-  elseif dein#util#_is_cygwin()
-    let cmd = 'make -f make_cygwin.mak'
-  elseif executable('gmake')
-    let cmd = 'gmake'
-  else
-    let cmd = 'make'
-  endif
-  let g:dein#plugin.build = cmd
-'''
+build = 'make'
 
 [[plugins]]
 repo    = 'vim-airline/vim-airline'
 depends = ['vim-airline-themes']
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
@@ -34,16 +26,13 @@ repo    = 'Shougo/neosnippet-snippets'
 depends = ['Shougo/neosnippet']
 
 [[plugins]]
+repo = 'vim-syntastic/syntastic'
+
+[[plugins]]
 repo = 'honza/vim-snippets'
 
 [[plugins]]
-repo = 'cocopon/iceberg.vim'
-
-[[plugins]]
 repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'fatih/vim-go'
