@@ -65,9 +65,14 @@ eval "$(rbenv init -)"
 
 # go
 export GOPATH="$HOME/go"
-export PATH=$PATH:$GOPATH
+export PATH="$PATH:$GOPATH/bin"
+
+# rust
+export CARGO_PATH="$HOME/.cargo"
+export PATH="$PATH:$CARGO_PATH/bin"
 
 # attach tmux when loggin
-if which tmux 2>&1 >/dev/null; then
-  test -z "$TMUX" && (tmux attach || tmux new-session)
+if [[ -z "$TMUX" ]]; then
+  tmux attach || tmux new-session
+  exit;
 fi

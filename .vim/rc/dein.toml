@@ -37,3 +37,11 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'fatih/vim-go'
 on_ft = 'go'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rs'
+
+[[plugins]]
+repo = 'racer-rust/vim-racer'
+on_ft = 'rs'
