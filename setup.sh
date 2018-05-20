@@ -13,7 +13,7 @@ for dir in $HOME/$VIM_RC_DIR $HOME/$VIM_RCD_DIR; do
     fi
 done
 
-DOT_FILES=(.gitcommit_template .gitconfig .gitignore_global .tmux.conf .vimrc .zshrc)
+DOT_FILES=(.gitcommit_template .gitconfig .gitignore_global .tmux.conf .vimrc .zshrc .hyper.js)
 
 VIM_RC_FILES=$(ls $DOTFILE_DIR/$VIM_RC_DIR)
 VIM_RCD_FILES=$(ls $DOTFILE_DIR/$VIM_RCD_DIR)
