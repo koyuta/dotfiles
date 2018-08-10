@@ -17,6 +17,8 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+ulimit -n 4096
+
 # do not distinct upper and lower case letter then tab completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -64,8 +66,18 @@ export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 
 # go
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
+
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+
+# nodebrew
+export NODEBREW_ROOT="$HOME/.nodebrew"
+export PATH="$NODEBREW_ROOT/current/bin:$PATH"
 
 # rust
 export CARGO_PATH="$HOME/.cargo"
