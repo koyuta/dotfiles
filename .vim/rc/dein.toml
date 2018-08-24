@@ -18,18 +18,11 @@ repo = 'nathanaelkane/vim-indent-guides'
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
-[[plugins]]
-repo = 'Shougo/neosnippet'
-
-[[plugins]]
-repo    = 'Shougo/neosnippet-snippets'
-depends = ['Shougo/neosnippet']
+#[[plugins]]
+#repo = 'honza/vim-snippets'
 
 [[plugins]]
 repo = 'vim-syntastic/syntastic'
-
-[[plugins]]
-repo = 'honza/vim-snippets'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -45,3 +38,16 @@ on_ft = 'rs'
 [[plugins]]
 repo = 'racer-rust/vim-racer'
 on_ft = 'rs'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+on_i  = 1
+on_ft = ['snippet']
+depends = ['neosnippet-snippets']

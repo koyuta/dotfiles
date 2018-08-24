@@ -46,7 +46,8 @@ PROMPT="%{${fg[cyan]}%}[%~]%{${reset_color}%}%1(v| %F{red}%1v%f|) "
 # alias
 alias ls='ls -G'
 alias ll='ls -la'
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias ssh='cat ~/.ssh/conf.d/*.config > ~/.ssh/config;ssh'
 alias restart_network='sudo killall -HUP mDNSResponder'
 

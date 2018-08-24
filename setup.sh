@@ -13,6 +13,10 @@ for dir in $HOME/$VIM_RC_DIR $HOME/$VIM_RCD_DIR; do
     fi
 done
 
+NEOVIM_DIR=$HOME/.config/nvim
+[ -e $NEOVIM_DIR ] || mkdir -p $NEOVIM_DIR
+ln -nfs $DOTFILE_DIR/.vimrc $NEOVIM_DIR/init.vim
+
 DOT_FILES=(.gitcommit_template .gitconfig .gitignore_global .tmux.conf .vimrc .zshrc .hyper.js)
 
 VIM_RC_FILES=$(ls $DOTFILE_DIR/$VIM_RC_DIR)
