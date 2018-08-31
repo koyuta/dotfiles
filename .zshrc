@@ -12,20 +12,20 @@ compinit -u
 setopt ignoreeof
 setopt COMBINING_CHARS
 
-# History settings
+# history settings
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
 ulimit -n 4096
 
-# do not distinct upper and lower case letter then tab completion
+# Do not distinct upper and lower case letter then tab completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# print filename in Japanese
+# Print filename in Japanese
 setopt print_eight_bit
 
-# vcs setting
+# VCS setting
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:*' enable git svn hg bzr
@@ -40,21 +40,17 @@ precmd () {
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
-# prompt
+# prompt setting
 PROMPT="%{${fg[cyan]}%}[%~]%{${reset_color}%}%1(v| %F{red}%1v%f|) "
 
-# alias
+# aliases
 alias ls='ls -G'
 alias ll='ls -la'
 alias vi='nvim'
 alias vim='nvim'
+alias sed='gsed'
 alias ssh='cat ~/.ssh/conf.d/*.config > ~/.ssh/config;ssh'
 alias restart_network='sudo killall -HUP mDNSResponder'
-
-# keychain
-if [ ! -f $HOME/.keychain/$HOSTNAME-sh ] ; then
-    unset SSH_AUTH_SOCK
-fi
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -88,4 +84,9 @@ export PATH="$PATH:$CARGO_PATH/bin"
 if [[ -z "$TMUX" ]]; then
   tmux attach || tmux new-session
   exit;
+fi
+
+# keychain
+if [ ! -f $HOME/.keychain/$HOSTNAME-sh ] ; then
+    unset SSH_AUTH_SOCK
 fi
