@@ -50,6 +50,12 @@ repo = 'Shougo/deoplete.nvim'
 on_i = 1
 
 [[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
 repo = 'Shougo/neosnippet'
 on_i  = 1
 on_ft = ['snippet']
