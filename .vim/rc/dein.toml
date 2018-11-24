@@ -10,6 +10,9 @@ repo    = 'vim-airline/vim-airline'
 depends = ['vim-airline-themes']
 
 [[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
@@ -45,6 +48,12 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_i = 1
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
 
 [[plugins]]
 repo = 'Shougo/neosnippet'
