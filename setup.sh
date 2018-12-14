@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+set -e
 
 DOTFILE_DIR=$HOME/dotfiles
 
@@ -34,3 +34,7 @@ for file in ${VIM_RCD_FILES[@]};do
     ln -nfs $HOME/dotfiles/.vim/vimrc.d/$file $HOME/.vim/vimrc.d/$file
 done
 
+[ -z $XDG_CONFIG_HOME ] && XDG_CONFIG_HOME=$HOME/.config
+
+[ -e $XDG_CONFIG_HOME ] || mkdir -p $XDG_CONFIG_HOME
+ln -nfs $DOTFILE_DIR/alacritty.yml $XDG_CONFIG_HOME/alacritty/alacritty.yml
