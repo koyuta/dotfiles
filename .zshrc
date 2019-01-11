@@ -3,6 +3,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:/bin:/sbin:/opt/bin:/usr/bin:$PATH
 # envvars
 export LANG=ja_JP.UTF-8
 export KCODE=u
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # zsh settings
 autoload -Uz colors
@@ -11,7 +12,6 @@ autoload -Uz compinit
 compinit -u
 setopt ignoreeof
 setopt COMBINING_CHARS
-
 # History settings
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000

@@ -87,19 +87,19 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Ricty
+    family: Menlo
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
   # Bold font face
   bold:
-    family: Ricty
+    family: Menlo
     # The `style` can be specified to pick a specific face.
     #style: Bold
 
   # Italic font face
   italic:
-    family: Ricty
+    family: Menlo
     # The `style` can be specified to pick a specific face.
     #style: Italic
 
@@ -153,25 +153,25 @@ colors:
 
   # Normal colors
   normal:
-   black:   '0x1E2132'
-   red:     '0xE27878'
-   green:   '0xB4BE82'
-   yellow:  '0xE2A478'
-   blue:    '0x84A0C6'
-   magenta: '0xA093C7'
-   cyan:    '0x89B8C2'
-   white:   '0xC6C8D1'
+    black:   '0x1E2132'
+    red:     '0xE27878'
+    green:   '0xB4BE82'
+    yellow:  '0xE2A478'
+    blue:    '0x84A0C6'
+    magenta: '0xA093C7'
+    cyan:    '0x89B8C2'
+    white:   '0xC6C8D1'
 
   # Bright colors
   bright:
-   black:   '0x6B7089'
-   red:     '0xE98989'
-   green:   '0xC0CA8E'
-   yellow:  '0xE9B189'
-   blue:    '0x91ACD1'
-   magenta: '0xADA0D3'
-   cyan:    '0x95C4CE'
-   white:   '0xD2D4DE'
+    black:   '0x6B7089'
+    red:     '0xE98989'
+    green:   '0xC0CA8E'
+    yellow:  '0xE9B189'
+    blue:    '0x91ACD1'
+    magenta: '0xADA0D3'
+    cyan:    '0x95C4CE'
+    white:   '0xD2D4DE'
 
   # Dim colors
   #
@@ -223,7 +223,7 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.9
+background_opacity: 1.0
 
 # Mouse bindings
 #

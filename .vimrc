@@ -31,12 +31,11 @@ endif
 
 filetype plugin indent on
 
-" include plugin settings
-set runtimepath+=~/.vim/
-runtime! vimrc.d/*.vim
-
 " color
 colorscheme iceberg
+
+" change mapleader `,` to `<space>`
+let mapleader = "\<Space>"
 
 " general
 syntax on
@@ -53,3 +52,7 @@ set showmatch
 set wildmenu
 set backspace=indent,eol,start
 set colorcolumn=80
+
+" include plugin settings
+set runtimepath+=~/.vim/
+runtime! vimrc.d/*.vim

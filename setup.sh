@@ -31,7 +31,7 @@ for file in ${VIM_RC_FILES[@]};do
 done
 
 for file in ${VIM_RCD_FILES[@]};do
-    ln -nfs $HOME/dotfiles/.vim/vimrc.d/$file $HOME/.vim/vimrc.d/$file
+    ln -nfs $HOME/dotfiles/.vim/vimrc.d $HOME/.vim/vimrc.d
 done
 
 [ -z $XDG_CONFIG_HOME ] && XDG_CONFIG_HOME=$HOME/.config

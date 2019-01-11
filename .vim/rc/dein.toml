@@ -18,18 +18,17 @@ repo = 'nathanaelkane/vim-indent-guides'
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
-#[[plugins]]
-#repo = 'honza/vim-snippets'
-
 [[plugins]]
-repo = 'vim-syntastic/syntastic'
+repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'fatih/vim-go'
-on_ft = 'go'
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
 repo = 'rust-lang/rust.vim'
