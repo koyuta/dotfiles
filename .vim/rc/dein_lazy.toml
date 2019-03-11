@@ -8,3 +8,8 @@ depends = ['neosnippet-snippets']
 repo = 'shougo/deoplete.nvim'
 on_i = 1
 on_source = ['neosnippet']
+
+[[plugins]]
+repo = 'sebastianmarkow/deoplete-rust'
+on_ft = 'rs'
+depends = ['deoplete.nvim']

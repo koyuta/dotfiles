@@ -1,5 +1,5 @@
 let g:ale_linters = {
-			\ 'rust': ['cargo'],
+			\ 'rust': ['cargo', 'rls', 'rustc'],
 			\ 'go': ['gometalinter'],
 			\ }
 

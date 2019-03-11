@@ -19,6 +19,9 @@ repo = 'nathanaelkane/vim-indent-guides'
 repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
+repo = 'osyo-manga/vim-over'
+
+[[plugins]]
 repo = 'w0rp/ale'
 
 [[plugins]]
@@ -44,3 +47,6 @@ repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'bfredl/nvim-miniyank'
