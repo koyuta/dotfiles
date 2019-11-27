@@ -1,10 +1,11 @@
 " go
-if executable('go-langserver')
+if executable('gopls')
     au User lsp_setup call lsp#register_server({
-        \ 'name': 'go-langserver',
-        \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
         \ 'whitelist': ['go'],
         \ })
+    autocmd BufWritePre *.go LspDocumentFormatSync
 endif
 
 " rust
@@ -17,16 +18,49 @@ if executable('rls')
         \ })
 endif
 
+" typescript
+if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'typescript-language-server',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
+        \ 'whitelist': ['typescript', 'typescript.tsx'],
+        \ })
+endif
+
+" javascript
+if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+      \ 'name': 'javascript support using typescript-language-server',
+      \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+      \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+      \ 'whitelist': ['javascript', 'javascript.jsx'],
+      \ })
+endif
+"
+"" vue (for .vue file)
+"if executable('vls')
+"    augroup LspVls
+"        au!
+"        au User lsp_setup call lsp#register_server({
+"          \ 'name': 'vue-language-server',
+"          \ 'cmd': {server_info->['vls']},
+"          \ 'whitelist': ['vue'],
+"          \ 'initialization_options': {
+"          \         'config': {
+"          \             'html': {},
+"          \              'vetur': {
+"          \                  'validation': {}
+"          \              }
+"          \         }
+"          \     }
+"          \ })
+"    augroup end
+"endif
+
 nmap <silent> <Leader>d :LspDefinition<CR>
-nmap <silent> <Leader>p :LspHover<CR>
+"nmap <silent> <Leader>p :LspHover<CR>
 nmap <silent> <Leader>r :LspReferences<CR>
-nmap <silent> <Leader>i :LspImplementation<CR>
+"nmap <silent> <Leader>i :LspImplementation<CR>
 nmap <silent> <Leader>s :split \| :LspDefinition <CR>
 nmap <silent> <Leader>v :vsplit \| :LspDefinition <CR>
-
-"let g:LanguageClient_serverCommands = {
-"    \ 'go': [
-"        \ $GOPATH.'/bin/go-langserver',
-"        \ '-format-tool', 'gofmt',
-"        \ '-lint-tool','golint'
-"        \ ]}

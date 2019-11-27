@@ -43,6 +43,22 @@ repo = 'racer-rust/vim-racer'
 on_ft = 'rs'
 
 [[plugins]]
+repo = 'ryanolsonx/vim-lsp-javascript'
+on_ft = ['js', 'jsx']
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['ts', 'tsx']
+
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-typescript'
+on_ft = ['ts', 'tsx']
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
+
+[[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]

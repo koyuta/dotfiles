@@ -1,6 +1,7 @@
 let g:ale_linters = {
 			\ 'rust': ['cargo', 'rls', 'rustc'],
 			\ 'go': ['gometalinter'],
+      \ 'typescript': ['tsserver'],
 			\ }
 
 let g:ale_fixers = {

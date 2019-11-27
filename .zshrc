@@ -1,9 +1,21 @@
 export PATH=/usr/local/bin:/usr/local/sbin:/bin:/sbin:/opt/bin:/usr/bin:$PATH
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/s03621/google-cloud-sdk/path.zsh.inc' ]; then
+  . '/Users/s03621/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/s03621/google-cloud-sdk/completion.zsh.inc' ]; then
+  . '/Users/s03621/google-cloud-sdk/completion.zsh.inc'
+fi
+
 # envvars
 export LANG=ja_JP.UTF-8
 export KCODE=u
 export XDG_CONFIG_HOME="$HOME/.config"
+export LDFLAGS="-L/usr/local/opt/gettext/lib"
+export CPPFLAGS="-I/usr/local/opt/gettext/include"
 
 # zsh settings
 autoload -Uz colors
