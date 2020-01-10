@@ -29,5 +29,6 @@ done
 for dir in $VIM_RC_DIR $VIM_RCD_DIR; do
     [ ! -e $dir ] || mkdir -p $dir
 done
+
 ln -nfs $DOTFILE_DIR/.vim/rc $VIM_RC_DIR
 ln -nfs $DOTFILE_DIR/.vim/vimrc.d $VIM_RCD_DIR

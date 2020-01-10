@@ -1,12 +1,11 @@
 let g:ale_linters = {
 			\ 'rust': ['cargo', 'rls', 'rustc'],
-			\ 'go': ['gometalinter'],
       \ 'typescript': ['tsserver'],
 			\ }
 
 let g:ale_fixers = {
+      \ 'go': ['goimports'],
 			\ 'rust': ['rustfmt'],
-			\ 'go': ['gofmt', 'goimports'],
 			\ }
 
 let g:ale_lint_on_text_changed = 0
@@ -20,5 +19,3 @@ let g:ale_list_window_size = 4
 
 let g:ale_sign_error = '>'
 let g:ale_sign_warning = '-'
-
-let g:ale_go_gometalinter_options = '--fast --enable=staticcheck --enable=gosimple --enable=unused'

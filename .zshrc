@@ -14,6 +14,7 @@ fi
 export LANG=ja_JP.UTF-8
 export KCODE=u
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
 export LDFLAGS="-L/usr/local/opt/gettext/lib"
 export CPPFLAGS="-I/usr/local/opt/gettext/include"
 
@@ -67,6 +68,7 @@ alias restart_network='sudo killall -HUP mDNSResponder'
 if [ ! -f $HOME/.keychain/$HOSTNAME-sh ] ; then
     unset SSH_AUTH_SOCK
 fi
+eval `keychain -q --eval`
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -86,6 +88,7 @@ export PATH="$PATH:$GOPATH/bin"
 # goenv
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
+export GOENV_DISABLE_GOPATH=1
 eval "$(goenv init -)"
 
 # nodebrew

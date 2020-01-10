@@ -2,7 +2,7 @@
 if executable('gopls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'gopls',
-        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+        \ 'cmd': {server_info->['gopls']},
         \ 'whitelist': ['go'],
         \ })
     autocmd BufWritePre *.go LspDocumentFormatSync
@@ -37,7 +37,7 @@ if executable('typescript-language-server')
       \ 'whitelist': ['javascript', 'javascript.jsx'],
       \ })
 endif
-"
+
 "" vue (for .vue file)
 "if executable('vls')
 "    augroup LspVls
