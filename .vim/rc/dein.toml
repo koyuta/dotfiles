@@ -28,6 +28,15 @@ repo = 'w0rp/ale'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'bfredl/nvim-miniyank'
+
+[[plugins]]
 repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
@@ -56,13 +65,8 @@ on_ft = ['ts', 'tsx']
 
 [[plugins]]
 repo = 'posva/vim-vue'
-on_ft = ['vue']
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+on_ft = 'vue'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
-
-[[plugins]]
-repo = 'bfredl/nvim-miniyank'
+on_ft = 'toml'

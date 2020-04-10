@@ -1,13 +1,8 @@
-[[plugins]]
-repo = 'shougo/neosnippet'
-on_i  = 1
-on_ft = ['snippet']
-depends = ['neosnippet-snippets']
-
-[[plugins]]
-repo = 'shougo/deoplete.nvim'
-on_i = 1
-on_source = ['neosnippet']
+#[[plugins]]
+#repo = 'shougo/neosnippet'
+#on_i  = 1
+#on_ft = ['snippet']
+#depends = ['neosnippet-snippets']
 
 [[plugins]]
 repo = 'sebastianmarkow/deoplete-rust'

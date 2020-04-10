@@ -1,15 +1,5 @@
 export PATH=/usr/local/bin:/usr/local/sbin:/bin:/sbin:/opt/bin:/usr/bin:$PATH
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/s03621/google-cloud-sdk/path.zsh.inc' ]; then
-  . '/Users/s03621/google-cloud-sdk/path.zsh.inc'
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/s03621/google-cloud-sdk/completion.zsh.inc' ]; then
-  . '/Users/s03621/google-cloud-sdk/completion.zsh.inc'
-fi
-
 # envvars
 export LANG=ja_JP.UTF-8
 export KCODE=u
@@ -70,6 +60,10 @@ if [ ! -f $HOME/.keychain/$HOSTNAME-sh ] ; then
 fi
 eval `keychain -q --eval`
 
+# vscode
+export VSCODE_ROOT="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app"
+export PATH="$PATH:$VSCODE_ROOT/bin"
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -98,6 +92,15 @@ export PATH="$NODEBREW_ROOT/current/bin:$PATH"
 # rust
 export CARGO_PATH="$HOME/.cargo"
 export PATH="$PATH:$CARGO_PATH/bin"
+
+# k9s
+export EDITOR=nvim
+
+# kubebuilder
+export PATH=$PATH:/usr/local/kubebuilder/bin
+
+# minikube
+#eval $(minikube -p minikube docker-env)
 
 # attach tmux when loggin
 if [[ -z "$TMUX" ]]; then
