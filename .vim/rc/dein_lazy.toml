@@ -3,8 +3,3 @@
 #on_i  = 1
 #on_ft = ['snippet']
 #depends = ['neosnippet-snippets']
-
-[[plugins]]
-repo = 'sebastianmarkow/deoplete-rust'
-on_ft = 'rs'
-depends = ['deoplete.nvim']

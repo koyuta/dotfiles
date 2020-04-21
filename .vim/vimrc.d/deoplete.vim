@@ -1,22 +1,14 @@
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_completion_start_length = 1
+let g:deoplete#auto_complete_delay = 0
+let g:deoplete#enable_camel_case = 0
+let g:deoplete#enable_ignore_case = 0
+let g:deoplete#enable_refresh_always = 0
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#file#enable_buffer_path = 1
+let g:deoplete#max_list = 10000
 
-"" Plugin key-mappings.
-"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"xmap <C-k>     <Plug>(neosnippet_expand_target)
-"
-"" SuperTab like snippets behavior.
-"" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-""imap <expr><TAB>
-"" \ pumvisible() ? "\<C-n>" :
-"" \ neosnippet#expandable_or_jumpable() ?
-"" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-"\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-"
-"" For conceal markers.
-"if has('conceal')
-"  set conceallevel=2 concealcursor=niv
-"endif
+inoremap <expr><tab> pumvisible() ? "\<C-n>" :
+      \ neosnippet#expandable_or_jumpable() ?
+      \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"

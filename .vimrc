@@ -1,8 +1,4 @@
 " dein
-if &compatible
-  set nocompatible
-endif
-
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -57,6 +53,7 @@ set showmatch
 set wildmenu
 set backspace=indent,eol,start
 set colorcolumn=80
+set nocompatible
 
 " include plugin settings
 set runtimepath+=~/.vim/

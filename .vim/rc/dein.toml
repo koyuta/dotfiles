@@ -6,8 +6,21 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo    = 'vim-airline/vim-airline'
-depends = ['vim-airline-themes']
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+on_i  = 1
+on_ft = ['snippet']
+depends = ['neosnippet-snippets']
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+depends = ['neosnippet']
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
@@ -19,19 +32,10 @@ repo = 'nathanaelkane/vim-indent-guides'
 repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
-repo = 'osyo-manga/vim-over'
-
-[[plugins]]
 repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
-repo = 'shougo/deoplete.nvim'
 
 [[plugins]]
 repo = 'bfredl/nvim-miniyank'
