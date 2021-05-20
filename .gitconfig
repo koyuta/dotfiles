@@ -1,6 +1,6 @@
 [user]
-  name = koyuta
-  email = koyuuta5330@gmail.com
+  email = misawa_koyuta@cyberagent.co.jp
+  name = misawa_koyuta
 [core]
   excludesfile = ~/.gitignore_global
   editor = nvim

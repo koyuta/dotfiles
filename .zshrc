@@ -15,7 +15,10 @@ autoload -Uz compinit
 compinit -u
 setopt ignoreeof
 setopt COMBINING_CHARS
-# History settings
+bindkey -d
+bindkey -e
+
+# history settings
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -60,9 +63,17 @@ if [ ! -f $HOME/.keychain/$HOSTNAME-sh ] ; then
 fi
 eval `keychain -q --eval`
 
+# openssl
+export OPENSSL_ROOT="/usr/local/opt/openssl@1.1"
+export PATH="$PATH:$OPENSSL_ROOT/bin"
+
 # vscode
 export VSCODE_ROOT="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app"
 export PATH="$PATH:$VSCODE_ROOT/bin"
+
+# krew
+export KREW_ROOT="$HOME/.krew"
+export PATH="$KREW_ROOT/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -98,6 +109,9 @@ export EDITOR=nvim
 
 # kubebuilder
 export PATH=$PATH:/usr/local/kubebuilder/bin
+
+# istioctl
+export PATH=$PATH:$HOME/.istioctl/bin
 
 # minikube
 #eval $(minikube -p minikube docker-env)

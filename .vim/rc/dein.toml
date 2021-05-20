@@ -44,6 +44,9 @@ repo = 'bfredl/nvim-miniyank'
 repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 depends = ['async.vim']
 
@@ -55,21 +58,26 @@ on_ft = 'rs'
 repo = 'racer-rust/vim-racer'
 on_ft = 'rs'
 
-[[plugins]]
-repo = 'ryanolsonx/vim-lsp-javascript'
-on_ft = ['js', 'jsx']
+#[[plugins]]
+#repo = 'ryanolsonx/vim-lsp-javascript'
+#on_ft = ['js', 'jsx']
+#
+#[[plugins]]
+#repo = 'leafgarland/typescript-vim'
+#on_ft = ['ts', 'tsx']
+#
+#[[plugins]]
+#repo = 'ryanolsonx/vim-lsp-typescript'
+#on_ft = ['ts', 'tsx']
+#
+#[[plugins]]
+#repo = 'posva/vim-vue'
+#on_ft = 'vue'
 
 [[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = ['ts', 'tsx']
-
-[[plugins]]
-repo = 'ryanolsonx/vim-lsp-typescript'
-on_ft = ['ts', 'tsx']
-
-[[plugins]]
-repo = 'posva/vim-vue'
-on_ft = 'vue'
+repo = 'plasticboy/vim-markdown'
+depends = 'tabular'
+on_ft = 'md'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
