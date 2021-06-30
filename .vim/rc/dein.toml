@@ -54,9 +54,9 @@ depends = ['async.vim']
 repo = 'rust-lang/rust.vim'
 on_ft = 'rs'
 
-[[plugins]]
-repo = 'racer-rust/vim-racer'
-on_ft = 'rs'
+#[[plugins]]
+#repo = 'racer-rust/vim-racer'
+#on_ft = 'rs'
 
 #[[plugins]]
 #repo = 'ryanolsonx/vim-lsp-javascript'
