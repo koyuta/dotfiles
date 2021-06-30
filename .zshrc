@@ -1,5 +1,4 @@
 export PATH=/usr/local/bin:/usr/local/sbin:/bin:/sbin:/opt/bin:/usr/bin:$PATH
-
 # envvars
 export LANG=ja_JP.UTF-8
 export KCODE=u
@@ -56,6 +55,13 @@ alias vi='nvim'
 alias vim='nvim'
 alias ssh='cat ~/.ssh/conf.d/*.config > ~/.ssh/config;ssh'
 alias restart_network='sudo killall -HUP mDNSResponder'
+
+
+# homebrew for apple silicon
+if [[ `uname -p` == "arm" ]]; then
+  HOMEBREW_ROOT=/opt/homebrew
+  export PATH=$HOMEBREW_ROOT/bin:$PATH
+fi
 
 # keychain
 if [ ! -f $HOME/.keychain/$HOSTNAME-sh ] ; then
