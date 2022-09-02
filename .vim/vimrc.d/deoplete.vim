@@ -13,3 +13,5 @@ call deoplete#custom#option({
 inoremap <expr><tab> pumvisible() ? "\<C-n>" :
       \ neosnippet#expandable_or_jumpable() ?
       \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
+
+let g:python3_host_prog = system('echo -n $(which python3)')

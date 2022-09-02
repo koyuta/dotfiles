@@ -5,7 +5,7 @@ set -e
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # general
-brew install git keychain
+brew install git keychain jq
 
 # tmux
 brew install tmux reattach-to-user-namespace

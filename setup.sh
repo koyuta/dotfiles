@@ -31,3 +31,6 @@ done
 
 # vim
 ln -nfs $DOTFILE_DIR/.vim $VIM_DIR
+
+# others
+mkdir -p ~/development
