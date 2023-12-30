@@ -13,8 +13,8 @@ if dein#load_state(s:dein_dir)
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
 
-  let s:toml      = '~/.vim/rc/dein.toml'
-  let s:lazy_toml = '~/.vim/rc/dein_lazy.toml'
+  let s:toml      = '~/.config/nvim/rc/dein.toml'
+  let s:lazy_toml = '~/.config/nvim/rc/dein_lazy.toml'
 
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
@@ -57,5 +57,5 @@ set colorcolumn=80
 set nocompatible
 
 " include plugin settings
-set runtimepath+=~/.vim/
+set runtimepath+=~/.config/nvim/
 runtime! vimrc.d/*.vim
