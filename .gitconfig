@@ -8,3 +8,15 @@
   indentHeuristic = true
 [commit]
   template = ~/.gitcommit_template
+#[url "https://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:x-oauth-basic@ghe.ca-tools.org/"]
+#	insteadOf = https://ghe.ca-tools.org/
+#[url "https://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:x-oauth-basic@github.com/"]
+#	insteadOf = https://github.com/
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+[url "git@ghe.ca-tools.org:"]
+    insteadOf = https://ghe.ca-tools.org/
+[diff "sopsdiffer"]
+	textconv = sops -d
+[url "git@github.com"]
+	insteadOf = https://github.com/

@@ -1,11 +1,11 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 set -e
 
 # homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#
 # general
-brew install git keychain jq
+brew install git keychain jq sheldon
 
 # tmux
 brew install tmux reattach-to-user-namespace

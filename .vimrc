@@ -31,6 +31,7 @@ endif
 filetype plugin indent on
 
 " color
+" colorschemeが見つからない場合は `call dein#recache_runtimepath()` で反映させる
 colorscheme iceberg
 
 " change mapleader `,` to `<space>`

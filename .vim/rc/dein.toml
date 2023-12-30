@@ -51,8 +51,14 @@ repo = 'prabirshrestha/vim-lsp'
 depends = ['async.vim']
 
 [[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
 repo = 'rust-lang/rust.vim'
 on_ft = 'rs'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
 
 #[[plugins]]
 #repo = 'racer-rust/vim-racer'
@@ -82,3 +88,6 @@ on_ft = 'md'
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+
+[[plugins]]
+repo = 'github/copilot.vim'
